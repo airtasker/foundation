@@ -12,6 +12,7 @@
     - <li class="search"> Needs to hold a <form> which can use .row.collapse and pre/postfix buttons or default type="search"
 */
 
+
   /* Element that controls breakpoint, no need to change this ever */
   .top-bar-js-breakpoint { width: $topBarBreakPoint !important; visibility: hidden; }
 
@@ -43,12 +44,12 @@
       /* Main Navigation links style */
       &>li { float: left;
         a:not(.button) { color: $topBarLinkColor; display: block; font-size: $topBarLinkSize; font-weight: $topBarLinkWeight; height: $topBarHeight; line-height: $topBarHeight; padding: 0 $topBarHeight / 3; }
-        &:hover, &.active { background: darken($topBarBgColor, 20%);
+        &:hover, &.active { background: $topBarBgDarkerColor;
           a { color: darken($topBarLinkColor, 15%); }
         }
 
         /* Dividers between navigation */
-        &.divider { background: darken($topBarBgColor, 20%); @include box-shadow(1px 0 0 rgba(255,255,255,0.10)); height: 100%; margin-right: 1px; width: 1px; }
+        &.divider { background: $topBarBgDarkerColor; @include box-shadow(1px 0 0 rgba(255,255,255,0.10)); height: 100%; margin-right: 1px; width: 1px; }
 
         /* Put a button in an <li> but give is a class */
         &.has-button {
@@ -85,7 +86,7 @@
                 &:hover { background: lighten($topBarBgColor, 10%); }
               }
               label { color: lighten($topBarBgColor, 30%); font-size: ms(0) - 4; font-weight: $topBarLinkWeight; margin: 0; padding-left: $topBarHeight / 3; text-transform: uppercase; }
-              &.divider { border-top: solid 1px darken($topBarBgColor, 20%); @include box-shadow(0 1px 0 rgba(255,255,255,.10) inset); height: 10px; padding: 0; width: 100%; }
+              &.divider { border-top: solid 1px $topBarBgDarkerColor; @include box-shadow(0 1px 0 rgba(255,255,255,.10) inset); height: 10px; padding: 0; width: 100%; }
               &:last-child { padding-bottom: 10px; }
             }
           }
@@ -153,7 +154,7 @@
           &.active, &:hover { background: darken($topBarBgColor, 5%); }
 
           /* Branding and name */
-          &.name { background: darken($topBarBgColor, 20%);
+          &.name { background: $topBarBgDarkerColor;
             h1 { line-height: 1;
               a { padding-left: $topBarHeight / 2; }
             }
@@ -161,9 +162,9 @@
 
           /* Dropdown Toggle */
           &.toggle-topbar { cursor: pointer; display: block; height: $topBarHeight; position: absolute; right: 0; top: 0; width: 50%;
-            a { @include cssTriangle($topBarNavToggleSize, #fff, top); padding: 0; position: absolute; top: 50%; right: $topBarHeight / 2; margin-top: -($topBarNavToggleSize / 2); }
+            a { @include cssTriangle($topBarNavToggleSize, $topBarDropToggleColor, top); padding: 0; position: absolute; top: 50%; right: $topBarHeight / 2; margin-top: -($topBarNavToggleSize / 2); }
             @if $topBarBreakPoint == 9999px { a { right: ($topBarHeight / 2) + ($columnGutter / 2);} }
-            &:hover {background: darken($topBarBgColor, 20%); }
+            &:hover {background: $topBarBgDarkerColor; }
           }
           &.toggle-topbar a { padding: 0 !important; }
 
