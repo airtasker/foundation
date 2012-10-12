@@ -43,6 +43,7 @@
               settings.$topbar.css('min-height', '');
 
             }
+            return false;
           });
 
           // Show the Dropdown Levels on Click
