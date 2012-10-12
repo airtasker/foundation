@@ -35,7 +35,7 @@
             methods.largestUL();
           }
 
-          $('.top-bar .toggle-topbar').live('click.fndtn', function (e) {
+          $('.top-bar .toggle-topbar').on('click.fndtn', function (e) {
             e.preventDefault();
 
             if (methods.breakpoint()) {
